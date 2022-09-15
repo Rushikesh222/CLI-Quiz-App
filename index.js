@@ -3,9 +3,19 @@ var score = 0;
 var userName = readLineSync.question("What is Your Name? ")
 console.log("Welcome " + userName + " Do You Know Rushikesh? ")
 console.log(userName + " If You Type Wrong Answer then You Will Get -1 And Right Answer Will Give You 1 Point ")
+var highScore=[{
+  name:"Rushikesh",
+  score:6,
+  
+},{
+  name:"Tejas",
+  score:5,
+  
+}]
+
 function play(question, answer) {
   var userAnswer = readLineSync.question(question)
-  if (userAnswer === answer) {
+  if (userAnswer.toUpperCase === answer.toUpperCase) {
     console.log("Right")
     score = score + 1
   } else {
